@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Add Water and Electricity Usage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="side-brand" href="dashboard.html">💧 AquaVolt</a>
+            <nav>
+                <a href="dashboard.html">▦ Dashboard</a>
+                <a href="usage.html">＋ Add Usage</a>
+                <a href="history.html">◷ History</a>
+                <a href="analytics.html">▥ Analytics</a>
+                <a href="bill.html">₹ Bill Calculator</a>
+                <a href="profile.html">♙ Profile</a>
+            </nav>
+            <a href="#" id="logoutBtn">↪ Logout</a>
+        </aside>
+
+        <main class="main-content narrow">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">RECORD CONSUMPTION</p>
+                    <h1>Add Daily Usage</h1>
+                </div>
+            </header>
+
+            <section class="panel form-panel">
+                <form id="usageForm">
+
+                    <label>Date</label>
+                    <input type="date" id="usageDate" required>
+
+                    <label>Water Category</label>
+                    <select id="category">
+                        <option value="">Select category</option>
+                        <option>Drinking</option>
+                        <option>Cooking</option>
+                        <option>Bathing</option>
+                        <option>Cleaning</option>
+                        <option>Laundry</option>
+                        <option>Gardening</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label>Water Usage (Litres)</label>
+                    <input type="number" id="waterUsage" min="0" step="0.1"
+                        placeholder="Enter water in litres">
+
+                    <label>Electricity Usage (kWh)</label>
+                    <input type="number" id="electricityUsage" min="0" step="0.1"
+                        placeholder="Enter electricity in kWh">
+
+                    <label>Notes (optional)</label>
+                    <input type="text" id="notes" placeholder="Add a note">
+
+                    <p class="hint">
+                        Enter water consumption, electricity consumption, or both.
+                    </p>
+
+                    <button type="submit" class="btn">Save Usage</button>
+
+                    <p id="usageMessage" class="form-message"></p>
+
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/usage.js"></script>
+</body>
+
+</html>

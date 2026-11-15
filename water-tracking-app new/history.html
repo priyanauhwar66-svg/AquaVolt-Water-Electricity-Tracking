@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usage History</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+<aside class="sidebar">
+    <a class="side-brand" href="dashboard.html">💧 AquaVolt</a>
+    <nav>
+        <a href="dashboard.html">▦ Dashboard</a>
+        <a href="usage.html">＋ Add Usage</a>
+        <a href="history.html">◷ History</a>
+        <a href="analytics.html">▥ Analytics</a>
+        <a href="bill.html">₹ Bill Calculator</a>
+        <a href="profile.html">♙ Profile</a>
+    </nav>
+    <a href="#" id="logoutBtn">↪ Logout</a>
+</aside>
+
+<main class="main-content">
+
+    <header class="topbar">
+        <div>
+            <p class="eyebrow">ALL RECORDS</p>
+            <h1>Usage History</h1>
+        </div>
+
+        <a href="usage.html" class="btn btn-small">
+            + Add Usage
+        </a>
+    </header>
+
+    <section class="panel">
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Water</th>
+                        <th scope="col">Electricity</th>
+                        <th scope="col">Bill</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="historyRows">
+                    <tr>
+                        <td colspan="5" class="empty">
+                            No records available.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+</main>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/history.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>AquaVolt Bill Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <a class="side-brand" href="dashboard.html">💧 AquaVolt</a>
+            <nav>
+                <a href="dashboard.html">▦ Dashboard</a>
+                <a href="usage.html">＋ Add Usage</a>
+                <a href="history.html">◷ History</a>
+                <a href="analytics.html">▥ Analytics</a>
+                <a href="bill.html">₹ Bill Calculator</a>
+                <a href="profile.html">♙ Profile</a>
+            </nav>
+            <a href="#" id="logoutBtn">↪ Logout</a>
+        </aside>
+
+        <main class="main-content narrow">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ESTIMATE COST</p>
+                    <h1>Household Bill Calculator</h1>
+                </div>
+            </header>
+
+            <section class="panel form-panel">
+                <p>Water rate: ₹0.05 per litre (project calculation).</p>
+
+                <label>Total Water Usage (Litres)</label>
+                <input type="number" id="water" min="0" step="0.1"
+                    placeholder="Enter water usage">
+
+                <p>Electricity rate: sample rate, editable below.</p>
+
+                <label>Total Electricity Usage (kWh)</label>
+                <input type="number" id="electricity" min="0" step="0.1"
+                    placeholder="Enter electricity usage">
+
+                <label>Electricity Rate (₹ per kWh)</label>
+                <input type="number" id="electricityRate" min="0" step="0.1"
+                    value="7">
+
+                <button type="button" class="btn" onclick="calculateBill()">
+                    Calculate Bill
+                </button>
+
+                <h3>Estimated Water Cost</h3>
+                <h2 id="waterBill">₹0.00</h2>
+
+                <h3>Estimated Electricity Cost</h3>
+                <h2 id="electricityBill">₹0.00</h2>
+
+                <h3>Total Estimated Bill</h3>
+                <h2 id="bill">₹0.00</h2>
+
+                <button type="button" class="btn btn-light"
+                    onclick="loadTotal()">
+                    Use My Saved Usage
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/bill.js"></script>
+</body>
+
+</html>

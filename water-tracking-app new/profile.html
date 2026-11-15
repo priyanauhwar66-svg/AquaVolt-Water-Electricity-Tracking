@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar"><a class="side-brand" href="dashboard.html">💧 AquaVolt</a>
+            <nav><a href="dashboard.html">▦ Dashboard</a><a href="usage.html">＋ Add Usage</a><a href="history.html">◷
+                    History</a><a href="analytics.html">▥ Analytics</a><a href="bill.html">₹ Bill Calculator</a><a
+                    href="profile.html">♙ Profile</a></nav><a href="#" id="logoutBtn">↪ Logout</a>
+        </aside>
+        <main class="main-content narrow">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">ACCOUNT</p>
+                    <h1>My Profile</h1>
+                </div>
+            </header>
+            <section class="panel">
+                <h2 id="profileName">User</h2>
+                <p id="profileEmail"></p>
+                <p>Household Water and Electricity Tracking Account</p>
+            </section>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+    <script>document.addEventListener("DOMContentLoaded", () => { if (!requireLogin()) return; const u = getCurrentUser(); document.getElementById("profileName").textContent = u.name; document.getElementById("profileEmail").textContent = u.email; });</script>
+</body>
+
+</html>

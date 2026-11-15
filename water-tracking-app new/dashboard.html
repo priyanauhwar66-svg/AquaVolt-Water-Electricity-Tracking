@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaVolt Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app-shell">
+
+    <aside class="sidebar">
+        <a class="side-brand" href="dashboard.html">💧 AquaVolt</a>
+
+        <nav>
+            <a href="dashboard.html">▦ Dashboard</a>
+            <a href="usage.html">＋ Add Usage</a>
+            <a href="history.html">◷ History</a>
+            <a href="analytics.html">▥ Analytics</a>
+            <a href="bill.html">₹ Bill Calculator</a>
+            <a href="profile.html">♙ Profile</a>
+        </nav>
+
+        <a href="#" id="logoutBtn">↪ Logout</a>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">OVERVIEW</p>
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="user-chip">
+                Welcome, <span id="welcomeName">User</span>
+            </div>
+        </header>
+
+        <section class="welcome-banner">
+            <div>
+                <p>YOUR HOME, YOUR IMPACT</p>
+                <h2>Track Smarter. Save More.</h2>
+                <p>Monitor your daily household water and electricity usage.</p>
+
+                <a href="usage.html" class="btn btn-small">
+                    + Add Today's Usage
+                </a>
+            </div>
+
+            <div class="banner-icon">💧⚡</div>
+        </section>
+
+        <section class="stat-grid">
+
+            <article class="stat-card">
+                <div class="stat-icon water">💧</div>
+                <p>Total Water Usage</p>
+                <h2 id="waterTotal">0 L</h2>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon water">⚡</div>
+                <p>Total Electricity Usage</p>
+                <h2 id="electricityTotal">0 kWh</h2>
+            </article>
+
+            <article class="stat-card">
+                <div class="stat-icon bill-icon">₹</div>
+                <p>Estimated Total Bill</p>
+                <h2 id="billTotal">₹0.00</h2>
+            </article>
+
+        </section>
+
+        <section class="panel">
+
+            <div class="panel-heading">
+                <h2>Recent Usage</h2>
+                <a href="history.html">View All →</a>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Water</th>
+                            <th scope="col">Electricity</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Water Cost</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recentRows">
+                        <tr>
+                            <td colspan="5" class="empty">
+                                No usage added yet.
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>
